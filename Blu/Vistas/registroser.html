@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro P.</title>
+<link rel="stylesheet" href="../Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body class="animacion animate__zoomInLeft"><br><br>
+<center>
+<h2>Agregar Servicios</h2></center>
+<br><br>
+<p> Bienvenido a la sección de registro de servicios, por favor llene los siguientes campos con  los datos que se solicitan:</p><br>
+<hr><br>
+<center>
+<div class="form">
+  <label for="nombre">Nombre del servicio: </label>
+<input id="nom" type="text"><br><br> 
+  <label for="nombre">Precio: </label>
+<input id="pre" type="number"><br><br>
+ <label for="tipo">Tipo de servicio: </label>
+    <select id="pro" name="pro">
+      <option value="Corte">Corte</option>
+      <option value="Barba">Barba</option>
+      <option value="Personalizado">Personalizado</option>
+        <option value="Otros">Otros</option>
+    </select>
+    <br><br>
+
+<button class="btn" id="btn_guardar" onclick="guardar()">Crear</button><br><br>
+</div>
+<br>
+<hr>
+<br>
+<div>
+<table>
+<thead>
+<tr>
+<th>Nombre del servicio</th>
+<th>Precio del servicio</th>
+<th>Tipo de servicio</th>
+</tr>
+</thead>
+<tbody id="tabla">
+</tbody>
+</table>
+</div>
+</center>
+<br><br><br><br>
+ <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by Gabriel Rodríguez.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <center><li><a class="facebook" href="https://www.facebook.com/cesargabriel.rodriguezdelaossa" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="whatsapp" href="https://wa.link/euheuv" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                                <li><a class="gmail" href="mailto:gabriel.delaossa2607@gmail.com" target="_blank"><i class="fa fa-gmail"></i></a></li>
+                            </center>
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
+<script>
+function guardar(){ var _nom = document.getElementById("nom").value; var _pre = document.getElementById("pre").value; var _pro = document.getElementById("pro").value; var fila="<tr><td>"+_nom+"</td><td>"+_pre +"</td><td>"+_pro +"</td></tr>"; var btn = document.createElement("TR"); 	btn.innerHTML=fila; document.getElementById("tabla").appendChild(btn); }
+</script>
+
+</body>
+</html>
